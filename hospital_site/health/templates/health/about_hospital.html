@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Cessa's Health Foundation Website">
+    <link rel="stylesheet" href="{% static 'cessa_css/hospital.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js'%}">    
+    <title>{% block title %}Cessa's Health Foundation {% endblock %}</title>
+</head>
+<body class="about_body">
+    <div class="bg-image">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/hos_logo.png' %}" alt="Logo"  id= "hos_logo" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'hospital_index' %}">Home</a>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Care at C.H.Fd
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Care for Infants</a></li>
+                                <li><a class="dropdown-item" href="#">Care for Kids/Teens</a></li>
+                                <li><a class="dropdown-item" href="#">Care for Youths/Young adults</a></li>
+                                <li><a class="dropdown-item" href="#">Care for Elderly</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Health Library
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Diseases/Conditions</a></li>
+                                <li><a class="dropdown-item" href="#">Drugs/Supplements</a></li>
+                                <li><a class="dropdown-item" href="#">Healthy Lifestyle</a></li>
+                                <li><a class="dropdown-item" href="#">Symptoms</a></li>
+                                <li><a class="dropdown-item" href="#">Tests/Procedures</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Medical Professionals
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Ask one of our Experts</a></li>
+                                <li><a class="dropdown-item" href="#">Refer a Patient</a></li>
+                                <li><a class="dropdown-item" href="#">Others</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <ul class="navbar-nav" id="left_nav">
+                        <li class="nav-item d-flex me-2"><a href="{% url 'hospital_appointment' %}">
+                            <img src="{% static 'images/person_icon.png' %}" alt="" id="person_pic">
+                            Request appointment</a>
+                        </li>
+                        <li class="nav-item d-flex mx-2" id="ul2"><a href="{% url 'hospital_about' %}">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="about1">
+            <div class="aboutt">
+                <div class="row pt-3" id="about_head">
+                    <h3>About Us</h3>
+                </div>
+                <div class="row" id="about_in">
+                    <p>Cessa's Health Foundation is a non-profit healthcare organization serving the diverse the diverse community and beyond. With pioneering medical research achievements, education programs 
+                            defining the future of healthcare, and wide-ranging community benefit activities, we are setting new standards for quality and innovation in patient care.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="first_body">
+        <div class="row" id="fb_1">
+            <div class="col">
+                <div class="row">
+                    <h3>Growing with C.H.Fd.</h3>
+                </div>
+                <div class="row">
+                    <p>It began in 2016 as a 12-bed clinic in Seibel Street, New Road, Borikiri. Today, Cessa's Health Foundation serves more than 100,000 people each year in over 20 locations, with more than 450 physicians and nurses and 100 research projects in motion. What never changes is our commitment to be a blessing for those in need.</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="{% static 'images/uncompleted_hos.jpeg' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="sec_body">
+        <div class="row">
+            <div class="col-3" id="sb_1">
+                <div class="row pt-2">
+                    <h3>Mission</h3>
+                </div>
+                <div class="row pt-2">
+                    <p>Guided by clear vision and values for 8 years now</p>
+                </div>
+                <div class="row pt-2" id="sb_1but">
+                    <button>View our Mission</button>
+                </div>
+            </div>
+            <div class="col-3" id="sb_2">
+                <div class="row pt-2">
+                    <h3>History</h3>
+                </div>
+                <div class="row pt-2">
+                    <p>Honouring 8years of service to the community</p>
+                </div>
+                <div class="row pt-2" id="sb_1but">
+                    <button>Discover our History</button>
+                </div>
+            </div>
+            <div class="col-3" id="sb_3">
+                <div class="row pt-2">
+                    <h3>Leadership</h3>
+                </div>
+                <div class="row pt-2">
+                    <p>Directing the community's premier healthcare system</p>
+                </div>
+                <div class="row pt-2" id="sb_1but">
+                    <button>Meet our Leaders</button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div id="thd_body">
+        <div class="row" id="thd_1">
+            <div class="col">
+                <div class="row">
+                    <h3>Community Benefit</h3>
+                </div>
+                <div class="row">
+                    <p>As an integral part of the community, our work goes beyind the walls of our facilies. We provide care to the uninsured and underinsured everyday through programs in and with schools, clinics, homeless shelters and community centers to elevate the health of the region.</p>
+                </div>
+                <div class="row" id="thd_but">
+                    <button>Explore community benefit</button>
+                </div>
+            </div>
+            <div class="col">
+                <img src="{%static 'images/hos_carol4.avif' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="frt_body">
+        <div class="row" id="frt_1">
+            <div class="col order-1">
+                <div class="row">
+                    <h3>Patient's Benefit</h3>
+                </div>
+                <div class="row">
+                    <p>As a patient or visitor, you will encounter the unique therapeutic benefits of some of the world's greatest art, thanks to Cessa's Health Foundation collection of more than 500 donated masterpieces.</p>
+                </div>
+                <div class="row" id="frt_but">
+                    <button>Discover Art and Healing</button>
+                </div>
+            </div>
+            <div class="col">
+                <img src="{%static 'images/hos_carol1.avif' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="fft_body">
+        <div class="row">
+            <div class="col-5" id="fft_1">
+                <div class="row pt-2">
+                    <h3>Research</h3>
+                </div>
+                <div class="row pt-2">
+                    <p>Cessa's Health Foundation provides leading edge technology and facilities to good physicians and scientists conducting researcg projects and clinical traits.</p>
+                </div>
+                <div class="row pt-2" id="fft_1but">
+                    <button>Discover Research</button>
+                </div>
+            </div>
+            <div class="col-5" id="fft_2">
+                <div class="row pt-2">
+                    <h3>Education</h3>
+                </div>
+                <div class="row pt-2">
+                    <p>We are training medical professionals of tomorrow with more than 20 residences and fellowships in specialty and sub-specialty areas and several graduate programs.</p>
+                </div>
+                <div class="row pt-2" id="fft_1but">
+                    <button>Explore Education</button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+
+<footer style="font-family: 'Times New Roman', Times, serif; background-color: rgb(223, 223, 238);">
+    <div class="last_div pt-5">
+        <div class="row">
+            <div class="col-3" id="give">
+                <img src="{% static 'images/hand_heart_hos.png' %}" alt="">
+            </div>
+            <div class="col-4">
+                <h2><strong>Help transform healthcare</strong></h2>
+            </div>
+            <div class="col-4">
+                <button class="give_button"><a href="">Give today</a></button>
+            </div>
+        </div>
+        <div class="row" id="end_writeup">
+            <h5><strong>Your donation can make a difference in the future of healthcare. Give now to support research at Cessa's Health Foundation.</strong></h5>
+        </div>
+    </div>
+    <div class="container pt-5 px-0">
+        <div class="row">
+            <div class="col-3 pt-5">
+                <div class="row pt-3">
+                    <h4><strong>Contact</strong></h4>
+                    <a href="" class="text-decoration-none fw-normal">cessashealthfd@gmail.com</a>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/facebook_hos.png' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/twitter_hos.png' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/instagram_hos.jpeg' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/linkedin_hos.png' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href=" class="text-decoration-none text-black"><img src="{% static 'images/youtube_hos.webp' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <h4><small class="lead">Health is wealth</small></h4>
+                    <img src="" alt="" style="width: 9rem; margin-top: 0rem; border-radius: 50%; height: 7rem;">
+                </div>
+            </div>
+            <div class="col-3 pt-5 px-5">
+                <div class="row pt-3">
+                    <h4><strong>Lagos</strong></h4>
+                <h4 class="lead pt-3"><small>Q1, Lord Jesus Estate</small></h4>
+                    <h4 class="lead"><small>Chevron Alternative, Lekki,</small></h4>
+                    <h4 class="lead"><small>Lagos, Nigeria</small></h4>
+                    <a href="" class="text-decoration-none"><h4 class="lead"><small>+234 907 781 7124</small></h4></a>
+                </div>
+                <div class="row pt-3">
+                    <h4><strong>Rivers</strong></h4>
+                    <h4 class="lead pt-3"><small>Plot 221, Deeper Life Bible Church Rd,</small></h4>
+                    <h4 class="lead"><small>UPE Sandfield</small></h4>
+                    <h4 class="lead"><small>Borikiri</small></h4>
+                    <h4 class="lead"><small>Port-Harcourt</small></h4>
+                    <h4 class="lead"><small>Rivers, Nigeria</small></h4>
+                </div>
+            </div>
+            <div class="col-3 pt-5 px-5">
+                <div class="row pt-3">
+                    <h4><strong>Abuja</strong></h4>
+                    <h4 class="lead pt-3"><small>354 Oyster Point Blvd,</small></h4>
+                    <h4 class="lead"><small>4th Wuse Close</small></h4>
+                    <h4 class="lead"><small>P.O Box 04080</small></h4>
+                    <h4 class="lead"><small>Abuja, Nigeria</small></h4>
+                </div>
+                <div class="row pt-3">
+                    <h4><strong>Abia</strong></h4>
+                    <h4 class="lead pt-3"><small>Office 215,</small></h4>
+                    <h4 class="lead"><small>Building 3,</small></h4>
+                    <h4 class="lead"><small>Umuahia,</small></h4>
+                    <h4 class="lead"><small>Abia, NIgeria</small></h4>
+                </div>
+            </div>
+            <div class="col-3 pt-5 px-5">
+                <div class="row pt-3">
+                    <h4><strong>Cape Town</strong></h4>
+                    <h4 class="lead pt-3"><small>Wework(1st Floor),</small></h4>
+                    <h4 class="lead"><small>80 Strand Street,</small></h4>
+                    <h4 class="lead"><small>CapeTown City Center,</small></h4>
+                    <h4 class="lead"><small>CapeTown, 8001</small></h4>
+                    <h4 class="lead"><small>South Africa</small></h4>
+                </div>
+                <div class="row pt-3">
+                    <h4><strong>Nairobi</strong></h4>
+                    <h4 class="lead pt-3"><small>The Pavilion(1st Floor),</small></h4>
+                    <h4 class="lead"><small>Lower Kabete Road, Westlands</small></h4>
+                    <h4 class="lead"><small>Nairobi, Kenya</small></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-5"></div>
+
+</footer>
+
+</html>

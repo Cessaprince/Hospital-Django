@@ -1,0 +1,491 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}
+
+.bg-image-home{
+    background-image: url(../images/hos_home_bg-image.webp); 
+    height: 40rem; 
+    width:auto;
+}
+
+.bg-image-appointment{
+    background-image: url(../images/appointment_hos_bg-img.webp); 
+    height: 100%; 
+    width:auto;
+}
+
+#hos_logo{
+    width: 5rem;
+    border-radius: 50%;
+}
+
+/* nav .container-fluid{
+    background-color: rgb(138, 98, 98);
+    margin-top: 0rem;
+} */
+
+nav .container-fluid{
+    border-color: black;
+}
+
+nav .container-fluid a:hover{
+    color: red;
+}
+
+#left_nav img{
+    width: 2rem;
+    height: 1.8rem;
+}
+
+#left_nav a{
+    text-decoration: none;
+    color:black;
+}
+
+#left_nav a:hover{
+    color: red;
+}
+
+#h2_tag h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    margin-left: 3rem;
+    margin-top: 40%;
+}
+
+#learn_icon{
+    padding-top: 0.45rem;
+}
+
+#learn_icon a{
+    text-decoration-line: underline;
+    color: black;
+    margin-left: 3rem;
+}
+
+#learn_icon a:hover{
+    color: red;
+}
+
+#learn_icon img{
+    width: 1.2rem;
+    height: 1rem;
+}
+
+#request_button button{
+    border-radius: 0.5rem;
+    border-color: black;
+    margin-top: 0.1rem;
+    background-color: none;
+}
+
+#request_button a{
+    text-decoration: none;
+    color: black;
+}
+
+#request_button a:hover{
+    color: red;
+}
+
+#div2{
+    margin-top: 8%;
+    margin-left: 5rem;
+}
+
+#one_link a{
+    padding-bottom: 1rem;
+}
+
+#div3{
+    margin-top: 8%;
+    margin-left: 5rem;
+}
+
+#div3 #spaced_texts{
+    margin-top: 20%;
+    padding-left: 5rem;
+}
+
+#div3 #spaced_texts h2{
+    font-weight: bold;
+    font-size: 2.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ 
+.why_button{
+    border-radius: 0.5rem;
+    background-color: white;
+    border-color: blue;
+    margin-top: 5%;
+    padding: 0.8rem;
+
+}
+
+.why_button a{
+    text-decoration: none;
+    color: black;
+}
+
+.why_button a:hover{
+    color: red;
+}
+
+.learn_button{
+    border-radius: 0.5rem;
+    background-color: white;
+    border-color: blue;
+    margin-top: 5%;
+    padding: 0.8rem;
+}
+
+.learn_button a{
+    text-decoration: none;
+    color: black;
+}
+
+.learn_button a:hover{
+    color: red;
+}
+
+#carouselExampleCaptions{
+    margin-top: 10%;
+}
+
+#div4{
+    margin-top: 8%;
+    margin-left: 3rem;
+}
+
+#div4 .row #col2{
+    padding-left: 4rem;
+}
+
+.last_div .row #give img{
+    margin-left: 5rem;
+}
+
+.last_div .row .col-4 .give_button{
+    border-radius: 0.5rem;
+    background-color: blue;
+    border-color: blue;
+    margin-top: 5%;
+    padding: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.last_div .row .col-4 .give_button a{
+    text-decoration: none;
+    color: black;
+}
+
+.last_div .row .col-4 .give_button a:hover{
+    color: aqua;
+}
+
+.last_div .row .col-4 h2{
+    padding-top: 1.2rem;
+}
+
+.last_div{
+    background-color: rgb(247, 157, 157);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+}
+
+.last_div #end_writeup h5{
+    padding-top: 2.5rem;
+    margin-left: 5rem
+}
+
+.bg-image{
+    background-image: 
+        url(../images/about_hos_nav_bg-image.jpeg);
+        height: 30rem;
+        padding-left: 2rem;
+        padding-right: 5rem;
+}
+
+.about1{
+    padding-top: 20rem;
+}
+
+.about1 .aboutt{
+    background-color: rgb(252, 251, 251);
+    padding-left: 2rem;
+    border-radius: 0.5rem;
+    margin-left: 4rem;
+}
+
+.about1 #about_head h3{
+    padding-left: 45%;
+    font-size: 2rem;
+    color: red;
+}
+
+.about1 .row p{
+    font-size: 1.2rem;
+}
+
+#first_body{
+    padding-top: 12rem;
+    padding-left: 4rem;
+    padding-bottom: 0rem;
+}
+
+#first_body p{
+    font-size: 1.15rem;
+}
+
+#first_body h3{
+    color:red;
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+#first_body img{
+    padding-left: 5rem;
+    width: 95%;
+    height: 25rem;
+    padding-top: 3rem;
+}
+
+.sec_body{
+    background-color: rgb(18, 17, 17);
+    padding-top: 5rem;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+#sb_1{
+    background-color: lightskyblue;
+    margin-left: 8rem;
+    border-radius: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+#sb_1 h3{
+    padding-top: 2rem;
+}
+
+#sb_2{
+    background-color: lightskyblue;
+    margin-left: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+#sb_2 h3{
+    padding-top: 2rem;
+}
+
+#sb_3{
+    background-color: lightskyblue;
+    margin-left: 2.5rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
+
+}
+
+#sb_3 h3{
+    padding-top: 2rem;
+}
+
+.sec_body button{
+    border-radius: 0.5rem;
+    width:15rem;
+    border-color: blue;
+    background-color: white;
+}
+
+.sec_body button:hover{
+    color:red;
+}
+
+.sec_body #sb_1but{
+    padding-left: 0.85rem;
+}
+
+#thd_body{
+    padding-top: 7rem;
+    padding-left: 4rem;
+    padding-bottom: 0rem;
+}
+
+#thd_body p{
+    font-size: 1.15rem;
+}
+
+#thd_body h3{
+    color:red;
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+#thd_body img{
+    padding-left: 1rem;
+    width: 95%;
+    height: 25rem;
+    padding-top: 3rem;
+}
+
+#thd_body button{
+    border-radius: 0.5rem;
+    width:15rem;
+    border-color: blue;
+    background-color: white;
+    margin-left: 1rem;
+}
+
+#thd_body button:hover{
+    color: red;
+}
+#frt_body button:hover{
+    color:red;
+}
+#frt_body{
+    padding-top: 7rem;
+    padding-left: 4rem;
+    padding-bottom: 0rem;
+}
+
+#frt_body p{
+    font-size: 1.15rem;
+}
+
+#frt_body h3{
+    color:red;
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+#frt_body img{
+    padding-left: 1rem;
+    width: 95%;
+    height: 25rem;
+    padding-top: 3rem;
+}
+
+#frt_body button{
+    border-radius: 0.5rem;
+    width:15rem;
+    border-color: blue;
+    background-color: white;
+    margin-left: 1rem;
+}
+
+#frt_body button:hover{
+    color:red;
+}
+
+.fft_body{
+    background-color: red;
+    padding-top: 7rem;
+    margin-top: 7rem;
+    padding-bottom: 5rem;
+}
+
+
+#fft_1{
+    background-color:  white;
+    margin-left: 6rem;
+    border-radius: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+
+#fft_1 h3{
+    padding-top: 2rem;
+}
+
+#fft_2{
+    background-color: white;
+    margin-left: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+#fft_2 h3{
+    padding-top: 2rem;
+}
+
+.fft_body button{
+    border-radius: 0.5rem;
+    width:15rem;
+    border-color: red;
+    background-color: red;
+    margin-left: 1rem;
+    color: white;
+}
+
+.fft_body button:hover{
+    color:rgb(114, 27, 27);
+}
+
+.fft_body #sb_1but{
+    padding-left: 0.85rem;
+}
+
+.app_body{
+    font-weight: 545;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.hos_body,
+.about_body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main{
+    margin: 4rem;
+}
+main .lead{
+    font-size: larger;
+    font-style: oblique;
+    margin: 2.3rem;
+}
+
+main .items li ul li{
+    padding-left: 4rem;
+}
+
+main #last_p{
+    padding-top: 3.75rem;
+}
+
+.about_footer{
+    background-color: white;
+}
+
+.top_f .logo_img img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+label,
+input{
+    margin-left: 4.5rem;
+}
+
+form{
+    margin-left: 1rem;
+}
+
+
+form button{
+    margin-left: 50%;
+    margin-top: 5rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+#care_tabs{
+    background-color: black;
+    padding-bottom: 10rem;
+}

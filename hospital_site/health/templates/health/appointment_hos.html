@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Cessa's Health Foundation Website">
+    <link rel="stylesheet" href="{% static 'cessa_css/hospital.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js'%}">    
+    <title>{% block title %}Cessa's Health Foundation Appointment{% endblock %}</title>
+</head>
+<body class="app_body">
+    <div class="bg-image-appointment">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/hos_logo.png' %}" alt="Logo"  id= "hos_logo" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'hospital_index' %}">Home</a>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Care at C.H.Fd
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Care for Infants</a></li>
+                                <li><a class="dropdown-item" href="#">Care for Kids/Teens</a></li>
+                                <li><a class="dropdown-item" href="#">Care for Youths/Young adults</a></li>
+                                <li><a class="dropdown-item" href="#">Care for Elderly</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Health Library
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Diseases/Conditions</a></li>
+                                <li><a class="dropdown-item" href="#">Drugs/Supplements</a></li>
+                                <li><a class="dropdown-item" href="#">Healthy Lifestyle</a></li>
+                                <li><a class="dropdown-item" href="#">Symptoms</a></li>
+                                <li><a class="dropdown-item" href="#">Tests/Procedures</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropright">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Medical Professionals
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Ask one of our Experts</a></li>
+                                <li><a class="dropdown-item" href="#">Refer a Patient</a></li>
+                                <li><a class="dropdown-item" href="#">Others</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <ul class="navbar-nav" id="left_nav">
+                        <li class="nav-item d-flex me-2"><a href="{% url 'hospital_appointment' %}">
+                            <img src="{% static 'images/person_icon.png' %}" alt="" id="person_pic">
+                            Request appointment</a>
+                        </li>
+                        <li class="nav-item d-flex mx-2" id="ul2"><a href="{% url 'hospital_about' %}">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <form action="{% url 'form_process' %}" method="post">
+            {% csrf_token %}
+            <div class="top_f">
+                <div class="logo_img">
+                    <h3>Doctor's Appointment Form</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="bio-data">
+                <h3>Bio-Data</h3>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="first-name" size="50px" required> 
+                <br><br>
+
+                <label for="middlename">Middle Name: </label>
+                <input type="text" id="middlename" name="middlename" placeholder="middle-name(optional)" size="47px">
+                <br><br>
+
+                <label for="lastname">Last Name: </label>
+                <input type="text" id="lastname" name="lasttname" placeholder="last-name" size="50px" required>
+                <br><br>
+
+                <label for="gender">Gender: </label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <br><br>
+
+                <label for="dob">Date of Birth: </label>
+                <input type="date" id="dob" name="date_of_birth" value="0000-00-00" min="1990-01-01" max="2024-08-01" required>
+                <br><br>
+
+                <label for="mail">Email: </label>
+                <input type="email" id="mail" name="mail" placeholder="name@gmail.com" size="55px" required>
+                <br><br>
+            </div>
+            <hr>
+            <div class="contact info">
+                <h3>Contact Information</h3>
+                <label for="addressline1">Address Line1: </label>
+                <input name="addressline1" type="text" id="addressline1" placeholder="street number" size="50px" required>
+                <br><br>
+
+                <label for="addressline2">Address Line2: </label>
+                <input name="addressline2" type="text" id="addressline2" placeholder="other street details" size="50px">
+                <br><br>
+                
+                <label for="p.o box">P.O Box: </label>
+                <input type="text" id="p.o box" value="000-00-000" size="56px">
+                <br><br>
+
+                <label for="phone no.">Phone Number: </label>
+                <input name="phone_no" type="tel" id="phone no." placeholder="+234 000-000-0000" size="49px" required>
+                <br><br>
+            </div>
+            <hr>
+
+            <div class="questions">
+                <h3>Q and A session</h3>
+                <ol class="feeling">
+                    <li>
+                    <p id="feeling">How do you feel?</p>
+                    <select name="feeling" id="feeling">
+                        <option value="0">select option</option>
+                        <option value="1">Drowsy</option>
+                        <option value="2">Very weak</option>
+                        <option value="3">Light headed</option>
+                        <option value="4">Feverish</option>
+                        <option value="5">Other</option>
+                    </select>
+                    <br><br>
+                    <ul class="feeling">
+                        <li>
+                            For <strong>drowsy</strong>, describe feeling
+                            <br>
+                            <textarea name="drowsy" id="drowsy" rows="5" cols="60"></textarea>
+                        </li>
+                        <li>
+                            For <strong>very weak</strong>, describe feeling
+                            <br>
+                            <textarea name="weak" id="weak" rows="5" cols="60"></textarea>
+                        </li>
+                        <li>
+                            For <strong>light headed</strong>, describe feeling
+                            <br>
+                            <textarea name="light headed" id="light headed" rows="5" cols="60"></textarea>
+                        </li>
+                        <li>
+                            For <strong>feverish</strong>, describe feeling
+                            <br>
+                            <textarea name="feverish" id="feverish" rows="5" cols="60"></textarea>
+                        </li>
+                        <li>
+                            For <strong>other</strong>, describe feeling
+                            <br>
+                            <textarea name="other feel" id="other feel" rows="5" cols="60" 
+                            placeholder="could be anything other than the above"></textarea>
+                        </li>
+                    </ul>    
+                    </li>    
+                    <li>
+                        <p>How long has the symptoms persisted?</p>
+                        <select name="time-frame" id="time-frame">
+                            <option value="0">select duration</option>
+                            <option value="1">a night</option>
+                            <option value="2">24-48hrs</option>
+                            <option value="3">48-72hrs</option>#
+                            <option value="4">Other</option>
+                        </select>
+                        <br><br>
+                        <ul>
+                            <li>
+                                If <strong>other</strong>, how long has the symptoms persisted?
+                                <br>
+                                <textarea name="other time-frame" id="other time-frame" rows="5" cols="60"></textarea>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <p>Would you like to be booked for an appointment with the doctor?</p>
+                        <input type="radio" name="booking" value="yes" checked>Yes
+                        <input type="radio" name="booking" value="no">No
+                        <br>
+                        <ul>
+                            <li>If <strong>Yes</strong>, when?
+                                <br>
+                                <input type="date" id="dob" name="date of birth" value="0000-00-00" min="2024-01-01" max="2025-01-01">
+                                <br><br>
+                            </li>
+                            <li>If <strong>No</strong>, why not?</li>
+                                <textarea name="why_not" id="why_not" cols="30" rows="10"></textarea>
+                        </ul>
+
+                    </li>
+                    </ul>
+                    </li>
+                </ol>
+            </div>
+            <hr>
+            <div class="picture">
+                <h3>Upload File</h3>
+                <p class="upload">Upload test results, Hospital Card details and any other supporting document.</p>
+                <input type="file">
+            </div>
+            <hr>
+            <div>
+                <h3> Other</h3>
+                <p class="short-note" name="short-note">Leave a short note for Doctor</p>
+                <br>
+                <textarea name="short note" id="short note" rows="15" cols="50" placeholder="if any"></textarea>
+            </div>
+            <button type="submit" class="submit" name="book">Book Appointment</button>
+
+        </form>
+    </div>
+</body>
+
+<footer style="font-family: 'Times New Roman', Times, serif; background-color: white;">
+    <div class="container pt-5 px-0">
+        <div class="row">
+            <div class="col-3 pt-5">
+                <div class="row pt-3">
+                    <h4><strong>Contact</strong></h4>
+                    <a href="" class="text-decoration-none fw-normal">cessashealthfd@gmail.com</a>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/facebook_hos.png' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/twitter_hos.png' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/instagram_hos.jpeg' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="" class="text-decoration-none text-black"><img src="{% static 'images/linkedin_hos.png' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <div class="col-2">
+                        <a href=" class="text-decoration-none text-black"><img src="{% static 'images/youtube_hos.webp' %}" alt="" width="19.5" height="20" class="d-inline-block align-text-top"></a>
+                    </div>
+                    <h4><small class="lead">Health is wealth</small></h4>
+                    <img src="" alt="" style="width: 9rem; margin-top: 0rem; border-radius: 50%; height: 7rem;">
+                </div>
+            </div>
+            <div class="col-3 pt-5 px-5">
+                <div class="row pt-3">
+                    <h4><strong>Lagos</strong></h4>
+                <h4 class="lead pt-3"><small>Q1, Lord Jesus Estate</small></h4>
+                    <h4 class="lead"><small>Chevron Alternative, Lekki,</small></h4>
+                    <h4 class="lead"><small>Lagos, Nigeria</small></h4>
+                    <a href="" class="text-decoration-none"><h4 class="lead"><small>+234 907 781 7124</small></h4></a>
+                </div>
+                <div class="row pt-3">
+                    <h4><strong>Rivers</strong></h4>
+                    <h4 class="lead pt-3"><small>Plot 221, Deeper Life Bible Church Rd,</small></h4>
+                    <h4 class="lead"><small>UPE Sandfield</small></h4>
+                    <h4 class="lead"><small>Borikiri</small></h4>
+                    <h4 class="lead"><small>Port-Harcourt</small></h4>
+                    <h4 class="lead"><small>Rivers, Nigeria</small></h4>
+                </div>
+            </div>
+            <div class="col-3 pt-5 px-5">
+                <div class="row pt-3">
+                    <h4><strong>Abuja</strong></h4>
+                    <h4 class="lead pt-3"><small>354 Oyster Point Blvd,</small></h4>
+                    <h4 class="lead"><small>4th Wuse Close</small></h4>
+                    <h4 class="lead"><small>P.O Box 04080</small></h4>
+                    <h4 class="lead"><small>Abuja, Nigeria</small></h4>
+                </div>
+                <div class="row pt-3">
+                    <h4><strong>Abia</strong></h4>
+                    <h4 class="lead pt-3"><small>Office 215,</small></h4>
+                    <h4 class="lead"><small>Building 3,</small></h4>
+                    <h4 class="lead"><small>Umuahia,</small></h4>
+                    <h4 class="lead"><small>Abia, NIgeria</small></h4>
+                </div>
+            </div>
+            <div class="col-3 pt-5 px-5">
+                <div class="row pt-3">
+                    <h4><strong>Cape Town</strong></h4>
+                    <h4 class="lead pt-3"><small>Wework(1st Floor),</small></h4>
+                    <h4 class="lead"><small>80 Strand Street,</small></h4>
+                    <h4 class="lead"><small>CapeTown City Center,</small></h4>
+                    <h4 class="lead"><small>CapeTown, 8001</small></h4>
+                    <h4 class="lead"><small>South Africa</small></h4>
+                </div>
+                <div class="row pt-3">
+                    <h4><strong>Nairobi</strong></h4>
+                    <h4 class="lead pt-3"><small>The Pavilion(1st Floor),</small></h4>
+                    <h4 class="lead"><small>Lower Kabete Road, Westlands</small></h4>
+                    <h4 class="lead"><small>Nairobi, Kenya</small></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-5"></div>
+
+</footer>
+</html>
