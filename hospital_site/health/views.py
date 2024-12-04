@@ -38,5 +38,5 @@ def form_process(request):
             return HttpResponse('<h4>Error creating patient: %s</h4>' % str(e))
         
 def success(request):
-    return HttpResponse('Form submiteed Successfully')
+    return HttpResponse('Form submitted Successfully')
         
